@@ -5,7 +5,7 @@ Introduction
 Sheriff.cash is a privacy-focused multi-chain mixer designed to provide untraceable and secure transactions.
 With built-in randomized obfuscation and clean wallet exit points, it ensures full anonymity in the crypto space.
 
-Features 🚀
+Features:
 
 Untraceable Mixing: Funds are split, randomized, and obfuscated through multiple layers before reaching the final recipient.
 
