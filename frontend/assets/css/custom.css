@@ -1,0 +1,264 @@
+:root {
+  --tyn-font-sans-serif: "Gilroy-Regular", sans-serif !important;
+  --tyn-primary: #D8AA19 !important;
+  --tyn-primary-rgb: 216, 170, 25 !important;
+  --tyn-secondary-rgb: 107, 111, 123 !important;
+  --tyn-body-font-size: 18px !important;
+  --tyn-primary-bg-subtle: #D8AA1920 !important;
+  --tyn-secondary-bg-subtle: #ffffff20 !important;
+}
+
+[data-bs-theme=dark] {
+    --tyn-body-bg: #000000 !important;
+    --tyn-body-bg-rgb: 0, 0, 0 !important;
+    --tyn-primary-bg-subtle: #D8AA1920 !important;
+    --tyn-body-color: #ffffff !important;
+}
+
+[data-bs-theme=dark] .form-control:not([data-bs-theme=light]), [data-bs-theme=dark] .form-select:not([data-bs-theme=light]) {
+    --tyn-form-control-border-color: #171B25 !important;
+    --tyn-form-control-bg: #171B25 !important;
+    --tyn-form-control-focus-bg: #6b6f7b42 !important;
+    --tyn-form-control-focus-border-color: #171B25 !important;    
+}
+
+.gilroy-bold {
+    font-family: "Gilroy-Bold", sans-serif;
+}
+.gilroy-heavy {
+    font-family: "Gilroy-Heavy", sans-serif;
+}
+.gilroy-light {
+    font-family: "Gilroy-Light", sans-serif;
+}
+.gilroy-medium {
+    font-family: "Gilroy-Medium", sans-serif;
+}
+.gilroy-regular {
+    font-family: "Gilroy-Regular", sans-serif;
+}
+.samsung-sharp {
+    font-family: 'Samsung Sharp Sans', sans-serif;
+}
+
+.navbar-nav {
+    --tyn-nav-link-font-size: 18px !important;
+    --tyn-nav-link-underline-border-width: var(--tyn-underline-thickness);
+    gap: 0;
+}
+
+.btn-primary, .product-card .count-input:not(.collapsed) .product-card-button, .product-card:hover .product-card-button, [data-bs-theme=dark] .product-card:hover .product-card-button {
+    --tyn-btn-bg: #D8AA19 !important;
+    --tyn-btn-border-color: #fff !important;
+    --tyn-btn-hover-bg: #b99112 !important;
+    --tyn-btn-active-bg: #b99112 !important;
+    --tyn-btn-hover-border-color: #187896 !important;
+    --tyn-btn-active-border-color:#187896 !important;
+    --tyn-btn-disabled-bg: #187896 !important;
+    --tyn-btn-disabled-border-color: #187896 !important;    
+}
+
+.btn-outline-primary {
+    --tyn-btn-color: #1FA2C9 !important;
+    --tyn-btn-border-color: #1FA2C9 !important;
+    --tyn-btn-hover-color: #fff;
+    --tyn-btn-hover-bg: #1FA2C9 !important;
+    --tyn-btn-hover-border-color: #1FA2C9 !important;
+}
+
+.text-secondary {
+    color: #98A3B9 !important;
+}
+.card {
+    --tyn-card-border-radius: 10px !important;
+}
+
+[why-zone] .card {
+    position: relative;
+}
+
+@media(min-width: 768px) {
+    [why-zone] .card:not(.last):after {
+        content: "";
+        width: 200px;
+        height: 12px;
+        background: url(/assets/img/line.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: -110px;
+        top: 21%;
+        z-index: 9;
+    }
+}
+
+.col-item span:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-47px, -13%);
+    width: 5px;
+    height: 43px;
+    background: #1FA2C9;
+    border-radius: 0 10px 10px 0;
+}
+
+.col-item {
+    position: relative;
+}
+
+
+.loader {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #D8AA19;
+    animation: dotAnimation 1.5s infinite ease-in-out;
+}
+
+
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.dot:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.dot:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+@keyframes dotAnimation {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+[data-bs-theme=dark] .navbar-sticky.is-stuck .navbar:not([data-bs-theme=light]), [data-bs-theme=dark] .navbar-sticky.is-stuck.navbar:not([data-bs-theme=light]), [data-bs-theme=dark] .navbar-sticky.navbar-stuck .navbar:not([data-bs-theme=light]), [data-bs-theme=dark] .navbar-sticky.navbar-stuck.navbar:not([data-bs-theme=light]) {
+    background: rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+}
+
+
+
+header .custom-bg:before {
+    content: "";
+    background: #031419;
+    height: 56px;
+    width: 40%;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}
+
+.faq-trigger {
+    cursor: pointer;
+}
+
+.active-trigger * {
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, padding .3s ease-in;
+}
+
+.active-trigger > div {
+    padding: 1.25rem 0;
+    background-color: #1FA2C9 !important;
+    color: white !important;
+    border-radius: 10px;
+}
+
+.active-trigger span {
+    color: white !important;
+}
+
+.active-trigger button {
+    background-color: white !important;
+}
+
+@media(max-width: 768px)  {
+    .active-trigger button {
+        margin-left: 1rem;
+    }
+}
+
+.footer {
+    background: #161A1D;
+}
+
+.footer .hstack.inner {
+    margin-bottom: 60px;
+    margin-top: 120px;
+}
+
+.footer-bottom {
+    background: #0F1214;
+}
+
+.input-group .btn, .input-group input {
+    height: 100px;
+}
+
+form .form-bg {
+    height: 100px;
+    background: #171B25;
+}
+
+.input-group .btn {
+    min-width: 200px;
+    border-right: 2px solid #20242E;
+    background: #171B25;
+    --tyn-btn-active-bg-color: #6b6f7b42;
+}
+
+
+.middle-background {
+    height: 772px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 70%), url(/assets/img/union_38.png);
+    background-size: 140%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -107%) !important;
+}	
+
+@media(min-width: 768px) {
+    .features-bg {
+        background: url(/assets/img/features-bg.png);
+        background-size: 150%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+
+    li.nav-item.active {
+        position: relative;
+    }
+    
+    li.nav-item.active:before {
+        content: "";
+        width: 100%;
+        height: 10px;
+        display: block;
+        background: #D8AA19;
+        border-radius: 0 0 10px 10px;
+        position: absolute;
+        top: -13%;
+    }
+}
